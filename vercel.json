@@ -1,0 +1,9 @@
+{
+  "buildCommand": "cd savia-website && npm install && npm run build",
+  "outputDirectory": "savia-website/build",
+  "installCommand": "echo 'skip'",
+  "framework": null,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
