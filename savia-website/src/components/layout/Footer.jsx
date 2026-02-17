@@ -1,10 +1,7 @@
-import { Link as ScrollLink } from 'react-scroll';
-import { Linkedin, Instagram, Facebook, MessageCircle } from 'lucide-react';
-import { useLang } from '../context/LanguageContext';
+import { Link } from 'react-router-dom';
+import { Linkedin, Instagram, Facebook, Youtube, Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
-  const { t } = useLang();
-
   return (
     <footer className="relative bg-dark text-white/80">
       {/* Wave SVG */}
@@ -12,7 +9,7 @@ const Footer = () => {
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
           <path
             d="M0 60L60 50C120 40 240 20 360 15C480 10 600 20 720 25C840 30 960 30 1080 25C1200 20 1320 10 1380 5L1440 0V60H0Z"
-            fill="#0D1F15"
+            fill="#1A2C1E"
           />
         </svg>
       </div>
@@ -21,20 +18,24 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Column 1: Logo */}
           <div>
-            <div className="mb-4">
+            <Link to="/" className="inline-block mb-4">
               <span className="font-display text-2xl font-bold text-white">SAVIA</span>
-              <span className="block text-[10px] tracking-[0.2em] uppercase text-white/40">
+              <span className="block text-[10px] tracking-[0.2em] uppercase text-white/40 font-body">
                 Sustainability Advisors
               </span>
-            </div>
-            <p className="text-sm text-white/60 mb-6 leading-relaxed">
-              {t.footer.description}
+            </Link>
+            <p className="text-sm text-white/50 mb-2 leading-relaxed font-body italic">
+              "Empoderando soluciones basadas en naturaleza."
+            </p>
+            <p className="text-sm text-white/40 mb-6 leading-relaxed font-body">
+              Firma costarricense de consultoría ambiental. Asesoramos a personas, empresas, instituciones y comunidades en sostenibilidad.
             </p>
             <div className="flex gap-3">
               {[
-                { icon: Linkedin, href: '#', label: 'LinkedIn' },
                 { icon: Instagram, href: '#', label: 'Instagram' },
                 { icon: Facebook, href: '#', label: 'Facebook' },
+                { icon: Linkedin, href: '#', label: 'LinkedIn' },
+                { icon: Youtube, href: '#', label: 'YouTube' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
                   key={label}
@@ -42,7 +43,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent/30 transition-colors"
+                  className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-secondary/30 transition-colors"
                 >
                   <Icon size={18} />
                 </a>
@@ -50,75 +51,86 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Column 2: Services */}
+          {/* Column 2: Navegacion */}
           <div>
-            <h4 className="text-white font-semibold mb-4">{t.footer.servicesTitle}</h4>
-            <ul className="space-y-3 text-sm">
-              {['Diagnóstico Ambiental', 'Estrategia de Sostenibilidad', 'Certificaciones Ambientales', 'Capacitación y Cultura'].map((s) => (
-                <li key={s}>
-                  <ScrollLink
-                    to="servicios"
-                    smooth
-                    duration={800}
-                    className="hover:text-accent cursor-pointer transition-colors"
-                  >
-                    {s}
-                  </ScrollLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 3: Company */}
-          <div>
-            <h4 className="text-white font-semibold mb-4">{t.footer.companyTitle}</h4>
-            <ul className="space-y-3 text-sm">
+            <h4 className="text-white font-semibold mb-4 font-body">Navegación</h4>
+            <ul className="space-y-3 text-sm font-body">
               {[
-                { label: t.footer.aboutUs, to: 'enfoque' },
-                { label: t.footer.ourProjects, to: 'proyectos' },
-                { label: t.footer.ourTeam, to: 'equipo' },
+                { label: 'Inicio', to: '/' },
+                { label: 'Servicios', to: '/servicios' },
+                { label: 'Proyectos', to: '/proyectos' },
+                { label: 'Blog', to: '/blog' },
+                { label: 'Contacto', to: '/contacto' },
               ].map(({ label, to }) => (
                 <li key={to}>
-                  <ScrollLink
-                    to={to}
-                    smooth
-                    duration={800}
-                    className="hover:text-accent cursor-pointer transition-colors"
-                  >
+                  <Link to={to} className="hover:text-secondary cursor-pointer transition-colors">
                     {label}
-                  </ScrollLink>
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
+          {/* Column 3: Servicios */}
           <div>
-            <h4 className="text-white font-semibold mb-4">{t.footer.contactTitle}</h4>
-            <ul className="space-y-3 text-sm">
-              <li>{t.contact.info.email}</li>
-              <li>{t.contact.info.phone}</li>
-              <li>{t.contact.info.location}</li>
+            <h4 className="text-white font-semibold mb-4 font-body">Servicios</h4>
+            <ul className="space-y-3 text-sm font-body">
+              {[
+                'Gestión de Residuos',
+                'Diagnósticos de Sostenibilidad',
+                'Educación Ambiental',
+                'Interpretación Ambiental',
+              ].map((s) => (
+                <li key={s}>
+                  <Link to="/servicios" className="hover:text-secondary cursor-pointer transition-colors">
+                    {s}
+                  </Link>
+                </li>
+              ))}
             </ul>
-            <a
-              href="https://wa.me/50600000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-accent/20 text-accent rounded-full text-sm font-medium hover:bg-accent/30 transition-colors"
-            >
-              <MessageCircle size={16} />
-              {t.footer.whatsapp}
-            </a>
+          </div>
+
+          {/* Column 4: Contacto */}
+          <div>
+            <h4 className="text-white font-semibold mb-4 font-body">Contacto</h4>
+            <ul className="space-y-3 text-sm font-body">
+              <li className="flex items-center gap-2">
+                <Mail size={16} className="text-secondary flex-shrink-0" />
+                info@saviasustainability.com
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone size={16} className="text-secondary flex-shrink-0" />
+                +506 XXXX-XXXX
+              </li>
+              <li className="flex items-center gap-2">
+                <MapPin size={16} className="text-secondary flex-shrink-0" />
+                Costa Rica, Centroamérica
+              </li>
+            </ul>
           </div>
         </div>
 
+        {/* ODS mention */}
+        <div className="text-center mb-8">
+          <p className="text-xs text-white/30 font-body">
+            Comprometidos con los Objetivos de Desarrollo Sostenible (ODS) y la Agenda 2030
+          </p>
+        </div>
+
         {/* Bottom */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-          <span>&copy; 2024 SAVIA Sustainability Advisors. {t.footer.rights}</span>
-          <div className="flex gap-6">
-            <span className="hover:text-white/60 cursor-pointer">{t.footer.privacy}</span>
-            <span className="hover:text-white/60 cursor-pointer">{t.footer.terms}</span>
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/30">
+          <span className="font-body">&copy; 2025 SAVIA Sustainability Advisors. Todos los derechos reservados.</span>
+          <div className="flex gap-6 font-body">
+            <span className="hover:text-white/50 cursor-pointer">Política de privacidad</span>
+            <span className="hover:text-white/50 cursor-pointer">Términos de uso</span>
           </div>
+        </div>
+
+        {/* Credit */}
+        <div className="text-center mt-6">
+          <p className="text-[10px] text-white/20 font-body">
+            Desarrollado por TyT Software & Solutions
+          </p>
         </div>
       </div>
     </footer>
