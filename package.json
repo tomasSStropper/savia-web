@@ -1,0 +1,8 @@
+{
+  "name": "savia-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd savia-website && npm install && npm run build"
+  }
+}
