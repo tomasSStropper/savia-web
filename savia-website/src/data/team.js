@@ -1,36 +1,30 @@
 export const team = [
   {
     id: 1,
-    name: "Carla Azofeifa Rojas",
-    role: "Directora y Fundadora",
-    roleEN: "Director & Founder",
-    specialty: "Gestión Ambiental Corporativa",
-    specialtyEN: "Corporate Environmental Management",
+    name: "Ariadna Sánchez",
+    role: "Co-Fundadora y Directora de Proyectos",
+    specialty: "Manejo de Recursos Naturales y Educación Ambiental",
     education: [
-      "M.Sc. Gestión Ambiental — UNED",
-      "B.Sc. Ingeniería Ambiental — UCR"
+      "Manejo de Recursos Naturales — UNED",
     ],
-    certifications: ["ISO 14001 Lead Auditor", "Bandera Azul Ecológica", "GRI Certified"],
+    experience: "+25 años de experiencia en campo",
+    certifications: ["Educación Ambiental", "Extensión Comunitaria", "Ciencia Ciudadana"],
+    bio: "Con más de 25 años de experiencia en campo, Ariadna lidera proyectos de educación ambiental, extensión comunitaria y ciencia ciudadana. Es Directora Ejecutiva de Nicoya Peninsula Waterkeeper y ha dedicado su carrera a empoderar comunidades rurales para proteger sus recursos naturales.",
     linkedin: "#",
-    bio: "Más de 10 años liderando procesos de transformación ambiental en empresas del sector privado y público en Costa Rica.",
-    bioEN: "Over 10 years leading environmental transformation processes in private and public sector companies in Costa Rica.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+    image: "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400"
   },
   {
     id: 2,
-    name: "Adriana Sánchez G.",
-    role: "Consultora Senior",
-    roleEN: "Senior Consultant",
-    specialty: "Certificaciones y Economía Circular",
-    specialtyEN: "Certifications & Circular Economy",
+    name: "Carla Azofeifa",
+    role: "Co-Fundadora y Directora Estratégica",
+    specialty: "Gestión Ambiental y Sostenibilidad Corporativa",
     education: [
-      "M.Sc. Economía Ambiental — TEC",
-      "B.Sc. Biología — UCR"
+      "Gestión Ambiental",
     ],
-    certifications: ["LEED AP", "Carbono Neutralidad", "Esencial Costa Rica"],
+    experience: "Especialista en diagnósticos y estrategia",
+    certifications: ["Gestión de Residuos", "Economía Circular", "Sostenibilidad Corporativa"],
+    bio: "Carla aporta una visión estratégica orientada a resultados, combinando rigor técnico con una profunda sensibilidad hacia las comunidades. Especializada en diagnósticos ambientales y diseño de estrategias de sostenibilidad para empresas e instituciones.",
     linkedin: "#",
-    bio: "Especialista en diseño de estrategias circulares y acompañamiento en procesos de certificación internacional.",
-    bioEN: "Specialist in circular strategy design and international certification process guidance.",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400"
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
   }
 ];

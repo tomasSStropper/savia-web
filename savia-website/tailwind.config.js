@@ -1,22 +1,28 @@
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       colors: {
-        primary: '#1B4332',
-        secondary: '#2D6A4F',
-        accent: '#52B788',
-        light: '#B7E4C7',
-        cream: '#F8F4E9',
-        gold: '#C9A84C',
-        dark: '#0D1F15',
+        primary: '#2D6A4F',
+        secondary: '#52B788',
+        accent: '#95D5B2',
+        light: '#D8F3DC',
+        earth: '#3A2F1E',
+        cream: '#F8F5F0',
+        dark: '#1A2C1E',
       },
       fontFamily: {
         display: ['Playfair Display', 'Georgia', 'serif'],
-        body: ['DM Sans', 'sans-serif'],
-        mono: ['DM Mono', 'monospace'],
+        body: ['Source Sans 3', 'sans-serif'],
+        mono: ['Space Mono', 'monospace'],
+      },
+      borderRadius: {
+        'xl': '12px',
+        '2xl': '16px',
+        '3xl': '24px',
       },
     },
   },
   plugins: [],
-}
+};

@@ -1,16 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
-import HeroSection from './components/sections/HeroSection';
-import AboutSection from './components/sections/AboutSection';
-import ServicesSection from './components/sections/ServicesSection';
-import ProcessSection from './components/sections/ProcessSection';
-import TeamSection from './components/sections/TeamSection';
-import ProjectsSection from './components/sections/ProjectsSection';
-import TestimonialsSection from './components/sections/TestimonialsSection';
-import ContactSection from './components/sections/ContactSection';
-import { LanguageProvider } from './components/context/LanguageContext';
-import './styles/globals.css';
+import Home from './pages/Home';
+import Servicios from './pages/Servicios';
+import Proyectos from './pages/Proyectos';
+import Blog from './pages/Blog';
+import Contacto from './pages/Contacto';
 
 function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -18,7 +14,7 @@ function App() {
   useEffect(() => {
     const handleScroll = () => {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (window.scrollY / totalHeight) * 100;
+      const progress = totalHeight > 0 ? (window.scrollY / totalHeight) * 100 : 0;
       setScrollProgress(progress);
     };
     window.addEventListener('scroll', handleScroll);
@@ -26,24 +22,21 @@ function App() {
   }, []);
 
   return (
-    <LanguageProvider>
-      <div className="app">
-        {/* Scroll progress bar */}
-        <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
-        <Navbar />
-        <main>
-          <HeroSection id="inicio" />
-          <AboutSection id="enfoque" />
-          <ServicesSection id="servicios" />
-          <ProcessSection id="proceso" />
-          <ProjectsSection id="proyectos" />
-          <TeamSection id="equipo" />
-          <TestimonialsSection />
-          <ContactSection id="contacto" />
-        </main>
-        <Footer />
-      </div>
-    </LanguageProvider>
+    <div className="app">
+      {/* Scroll progress bar */}
+      <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/servicios" element={<Servicios />} />
+          <Route path="/proyectos" element={<Proyectos />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contacto" element={<Contacto />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   );
 }
 
