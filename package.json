@@ -1,8 +1,11 @@
 {
-  "name": "savia-web",
-  "version": "1.0.0",
-  "private": true,
+  "name": "savia-website",
+  "version": "0.1.0",
   "scripts": {
-    "build": "cd savia-website && npm install && npm run build"
+    "start": "...",
+    "build": "..."
+  },
+  "dependencies": {
+    ...
   }
 }
