@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <!-- Leaf icon -->
+  <g transform="translate(0, 8)">
+    <!-- Main leaf shape -->
+    <path d="M30 5 C45 15, 52 35, 30 60 C8 35, 15 15, 30 5Z" fill="#2D6A4F"/>
+    <!-- Leaf vein -->
+    <path d="M30 12 L30 52" stroke="#95D5B2" stroke-width="1.2" stroke-linecap="round"/>
+    <path d="M30 22 L22 30" stroke="#95D5B2" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M30 28 L38 36" stroke="#95D5B2" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M30 34 L20 42" stroke="#95D5B2" stroke-width="0.8" stroke-linecap="round"/>
+    <path d="M30 40 L40 48" stroke="#95D5B2" stroke-width="0.8" stroke-linecap="round"/>
+    <!-- Small secondary leaf -->
+    <path d="M18 2 C26 6, 30 18, 22 28 C14 18, 14 8, 18 2Z" fill="#52B788" opacity="0.6"/>
+  </g>
+  <!-- SAVIA text -->
+  <text x="68" y="42" font-family="'Playfair Display', Georgia, serif" font-size="38" font-weight="700" fill="#2D6A4F" letter-spacing="3">SAVIA</text>
+  <!-- Subtitle -->
+  <text x="69" y="62" font-family="'Source Sans 3', sans-serif" font-size="10" fill="#52B788" letter-spacing="3.5" text-transform="uppercase" font-weight="600">SUSTAINABILITY ADVISORS</text>
+</svg>

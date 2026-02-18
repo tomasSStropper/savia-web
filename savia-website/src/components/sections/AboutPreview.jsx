@@ -14,7 +14,7 @@ const AboutPreview = () => {
   ];
 
   return (
-    <section className="section-padding bg-cream leaf-pattern" ref={ref}>
+    <section className="section-padding bg-warm" ref={ref}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -48,7 +48,7 @@ const AboutPreview = () => {
                 <motion.div
                   key={i}
                   variants={fadeInUp}
-                  className="flex gap-3 items-start p-4 rounded-xl bg-white/60 border border-secondary/10 hover:bg-white transition-colors"
+                  className="flex gap-3 items-start p-4 rounded-xl bg-cream border border-secondary/10 hover:shadow-md transition-all"
                 >
                   <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center flex-shrink-0">
                     <val.icon size={20} className="text-secondary" />
@@ -70,25 +70,37 @@ const AboutPreview = () => {
             </Link>
           </motion.div>
 
-          {/* Right: Image collage */}
+          {/* Right: Photo grid */}
           <motion.div variants={fadeInRight} className="relative">
-            <div className="relative rounded-xl overflow-hidden" style={{ borderRadius: '12px' }}>
-              <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
-                alt="Equipo SAVIA trabajando con comunidades"
-                className="w-full h-[500px] object-cover"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+            <div className="grid grid-cols-2 gap-4">
+              {/* Main image - community workshop */}
+              <div className="col-span-2 relative rounded-xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&q=80"
+                  alt="Taller comunitario SAVIA"
+                  className="w-full h-[340px] object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+              </div>
+              {/* Secondary image - group activity */}
+              <div className="relative rounded-xl overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=400&q=80"
+                  alt="Actividad grupal en comunidad"
+                  className="w-full h-[180px] object-cover"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/10 to-transparent" />
+              </div>
+              {/* Stats card filling second column */}
+              <div className="relative rounded-xl bg-cream flex flex-col items-center justify-center p-6 border border-sand">
+                <p className="font-mono text-4xl font-bold text-primary mb-1">+25</p>
+                <p className="text-sm text-earth/60 font-body text-center">años trabajando con comunidades</p>
+              </div>
             </div>
             {/* Decorative frame */}
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-secondary/20 rounded-xl -z-10" style={{ borderRadius: '12px' }} />
-
-            {/* Floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border border-secondary/10">
-              <p className="font-mono text-2xl font-bold text-primary">+25</p>
-              <p className="text-xs text-earth/60 font-body">años en campo</p>
-            </div>
+            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-sand rounded-xl -z-10" />
           </motion.div>
         </div>
       </motion.div>

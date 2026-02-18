@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
 
 .btn-primary {
   @apply px-8 py-4 bg-primary text-white font-semibold rounded-full
-    hover:bg-secondary transition-all duration-300 inline-flex items-center gap-2;
+    hover:bg-primary/90 transition-all duration-300 inline-flex items-center gap-2;
 }
 
 .btn-secondary {
@@ -84,4 +84,14 @@ h1, h2, h3, h4 {
 .btn-outline {
   @apply px-8 py-4 border-2 border-primary text-primary font-semibold rounded-full
     hover:bg-primary hover:text-white transition-all duration-300 inline-flex items-center gap-2;
+}
+
+/* Warm section backgrounds */
+.bg-warm-gradient {
+  background: linear-gradient(180deg, #F8F5F0 0%, #F3EDE4 100%);
+}
+
+/* Photo card styling */
+.photo-frame {
+  @apply rounded-xl overflow-hidden shadow-lg border-4 border-cream;
 }

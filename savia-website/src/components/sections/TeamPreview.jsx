@@ -8,7 +8,7 @@ const TeamPreview = () => {
   const { ref, inView } = useScrollAnimation();
 
   return (
-    <section className="section-padding bg-white" ref={ref}>
+    <section className="section-padding bg-warm" ref={ref}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
