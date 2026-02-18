@@ -40,7 +40,7 @@ const CTASection = () => {
         <motion.div variants={fadeInUp}>
           <Link
             to="/contacto"
-            className="px-10 py-5 bg-white text-primary font-bold rounded-full hover:bg-accent hover:text-dark transition-all duration-300 inline-flex items-center gap-3 text-lg shadow-xl hover:shadow-2xl font-body"
+            className="px-10 py-5 bg-cream text-primary font-bold rounded-full hover:bg-white transition-all duration-300 inline-flex items-center gap-3 text-lg shadow-xl hover:shadow-2xl font-body"
           >
             Agendá una reunión inicial
             <ArrowRight size={20} />

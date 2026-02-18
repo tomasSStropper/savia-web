@@ -10,7 +10,7 @@ const BlogPreview = () => {
   const { ref, inView } = useScrollAnimation();
 
   return (
-    <section className="section-padding bg-light/30" ref={ref}>
+    <section className="section-padding bg-cream-50" ref={ref}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"

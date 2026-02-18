@@ -10,7 +10,7 @@ const ProjectsPreview = () => {
   const { ref, inView } = useScrollAnimation();
 
   return (
-    <section className="section-padding bg-cream" ref={ref}>
+    <section className="section-padding bg-warm" ref={ref}>
       <motion.div
         variants={staggerContainer}
         initial="hidden"
@@ -20,7 +20,7 @@ const ProjectsPreview = () => {
         <SectionTitle
           badge="Historias de Impacto"
           title="Historias de éxito que generan impacto"
-          subtitle="Cada proyecto es una oportunidad para transformar la relación entre las personas y su entorno."
+          subtitle="Cada proyecto transforma comunidades y fortalece el vínculo entre las personas y su territorio."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">

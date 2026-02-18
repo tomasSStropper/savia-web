@@ -35,28 +35,19 @@ const Navbar = () => {
       <nav
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
         style={{
-          background: showTransparent ? 'transparent' : 'rgba(255,255,255,0.97)',
+          background: showTransparent ? 'transparent' : 'rgba(248,245,240,0.97)',
           backdropFilter: showTransparent ? 'none' : 'blur(20px)',
           boxShadow: showTransparent ? 'none' : '0 1px 40px rgba(45,106,79,0.08)',
         }}
       >
         <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex flex-col">
-            <span
-              className={`font-display text-2xl font-bold tracking-wide transition-colors duration-500 ${
-                showTransparent ? 'text-white' : 'text-primary'
-              }`}
-            >
-              SAVIA
-            </span>
-            <span
-              className={`text-[10px] tracking-[0.2em] uppercase font-body transition-colors duration-500 ${
-                showTransparent ? 'text-white/60' : 'text-earth/40'
-              }`}
-            >
-              Sustainability Advisors
-            </span>
+          <Link to="/" className="flex items-center">
+            <img
+              src={showTransparent ? '/images/logo-savia-white.svg' : '/images/logo-savia.svg'}
+              alt="SAVIA - Sustainability Advisors"
+              className="h-10 w-auto transition-all duration-500"
+            />
           </Link>
 
           {/* Desktop Nav */}

@@ -9,7 +9,15 @@ export default {
         accent: '#95D5B2',
         light: '#D8F3DC',
         earth: '#3A2F1E',
-        cream: '#F8F5F0',
+        cream: {
+          DEFAULT: '#F8F5F0',
+          50: '#FDFCFA',
+          100: '#FAF8F4',
+          200: '#F3EDE4',
+          300: '#EDE6D9',
+        },
+        warm: '#F3EDE4',
+        sand: '#E8DFD0',
         dark: '#1A2C1E',
       },
       fontFamily: {

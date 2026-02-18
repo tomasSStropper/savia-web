@@ -3,13 +3,13 @@ import { Linkedin, Instagram, Facebook, Youtube, Mail, Phone, MapPin } from 'luc
 
 const Footer = () => {
   return (
-    <footer className="relative bg-dark text-white/80">
+    <footer className="relative text-white/80" style={{ background: 'linear-gradient(180deg, #2D6A4F 0%, #1A2C1E 100%)' }}>
       {/* Wave SVG */}
       <div className="absolute -top-px left-0 right-0 overflow-hidden">
         <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
           <path
             d="M0 60L60 50C120 40 240 20 360 15C480 10 600 20 720 25C840 30 960 30 1080 25C1200 20 1320 10 1380 5L1440 0V60H0Z"
-            fill="#1A2C1E"
+            fill="#2D6A4F"
           />
         </svg>
       </div>
@@ -19,10 +19,7 @@ const Footer = () => {
           {/* Column 1: Logo */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <span className="font-display text-2xl font-bold text-white">SAVIA</span>
-              <span className="block text-[10px] tracking-[0.2em] uppercase text-white/40 font-body">
-                Sustainability Advisors
-              </span>
+              <img src="/images/logo-savia-white.svg" alt="SAVIA Sustainability Advisors" className="h-12 mb-4" />
             </Link>
             <p className="text-sm text-white/50 mb-2 leading-relaxed font-body italic">
               "Empoderando soluciones basadas en naturaleza."
